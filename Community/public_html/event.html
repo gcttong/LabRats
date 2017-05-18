@@ -8,9 +8,18 @@
     <title>Coding Night for Kids</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="gary.css">
     <link rel="stylesheet" href="firstLink.css">
+    <link rel="stylesheet" href="tiles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #map {
+            width: 700px;
+            height: 400px;
+            background-color: #CCC;
+        }
+    </style>
     <style>
         body,
         h1,
@@ -76,7 +85,7 @@
             <div class="w3-row-padding">
                 <div class="w3-half w3-container w3-margin-bottom">
                     <div class="w3-container w3-white">
-                        <img src="/images/mountains.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                        <img src="./images/python.png" id="imgphotos" alt="Norway" style="width:100%" class="w3-hover-opacity">
                     </div>
                 </div>
                 <div class="w3-half w3-container w3-margin-bottom">
@@ -90,22 +99,77 @@
             <div class="w3-row-padding">
 
                 <div class="w3-third w3-container w3-margin-bottom">
-                    <img src="/w3images/mountains.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
                     <div class="w3-container w3-white">
                         <p><b>Friends Attending</b></p>
                         <p>Joe, Bob, Max</p>
                     </div>
                 </div>
                 <div class="w3-third w3-container w3-margin-bottom">
-                    <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
                     <div class="w3-container w3-white">
-                        <p><b>Lorem Ipsum</b></p>
+                        <p><b>Map</b></p>
                         <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
                             congue gravida diam non fringilla.</p>
                     </div>
                 </div>
 
             </div>
+
+            <div class="w3-row-padding">
+
+                <div class="w3-third w3-container w3-margin-bottom">
+                    <div class="w3-container w3-white">
+                        <p><b>Friends Attending</b></p>
+                        <p>Joe, Bob, Max</p>
+                    </div>
+                </div>
+                <div class="w3-third w3-container w3-margin-bottom">
+                    <div class="w3-container w3-white">
+                        <p><b>Map</b></p>
+                        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+                            congue gravida diam non fringilla.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="map"></div>
+            <script>
+                function initMap() {
+                    var myCenter = new google.maps.LatLng(49.9042073, -97.1604514);
+                    var mapDiv = document.getElementById('map');
+
+                    var map = new google.maps.Map(mapDiv, {
+                        center: { lat: 49.9042073, lng: -97.1604514 },
+                        zoom: 16
+                    });
+                    var contentString = '<div id="content">' +
+                        '<div id="siteNotice">' +
+                        '</div>' +
+                        '<h1 id="firstHeading" class="firstHeading">Brodie Centre, University of Manitoba</h1>' +
+                        '<div id="bodyContent">' +
+                        '<p> 727 Mcdermot Ave, Winnipeg, Manitoba, Canada ' +
+
+                        '<a href="https://www.google.com/maps/place/Brodie+Centre/@49.9041921,-97.1625631,17z/data=!3m1!4b1!4m2!3m1!1s0x52ea73dc5777329f:0x3a90798800ec2cef?hl=en-US"><FONT COLOR="4285F4">View on Google Maps</FONT></a></p>' +
+                        '</div>' +
+                        '</div>';
+                    var infowindow = new google.maps.InfoWindow({
+                        content: contentString
+                    });
+                    var marker = new google.maps.Marker({
+                        position: myCenter,
+                        map: map, title: 'Hello World'
+                    });
+
+
+                    marker.setMap(map);
+                    infowindow.open(map, marker);
+                    marker.addListener('click', function () {
+                        infowindow.open(map, marker);
+                    });
+                }
+            </script>
+
+            <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 
 
             <!-- Pagination -->
