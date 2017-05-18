@@ -263,6 +263,8 @@ $(document).ready(function () {
 
     var myPie = new Chart(document.getElementById("canvas3").getContext("2d")).Doughnut(pieData,{percentageInnerCutout : 50});
 });
+
+
 /*!
  * Chart.js
  * http://chartjs.org/
@@ -1007,7 +1009,7 @@ window.Chart = function(context){
 
     var Doughnut = function(data,config,ctx){
         var segmentTotal = 0;
-
+        
         //In case we have a canvas that is not a square. Minus 5 pixels as padding round the edge.
         var doughnutRadius = Min([height/2,width/2]) - 5;
 
@@ -1023,7 +1025,7 @@ window.Chart = function(context){
             ctx.font = config.labelFontStyle + " " + config.labelFontSize+"px " + config.labelFontFamily;
             ctx.fillStyle = 'black';
             ctx.textBaseline = 'middle';
-            ctx.fillText(data[0].value + "%", width/2 - 20, width/2, 200);
+            ctx.fillText( data[0].value, width/2 - 20, width/2, 200);
 
             var cumulativeAngle = -Math.PI/2,
                 scaleAnimation = 1,
