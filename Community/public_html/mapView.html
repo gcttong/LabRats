@@ -12,8 +12,21 @@ Project: Community
   }
 </style>
 <link rel="stylesheet" href="tiles.css">
+<link rel="stylesheet" href="firstLink.css">
 
 <body>
+  </div>
+    <div class="w3-container">
+      
+    <h1><b>ConnectME</b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <span class="w3-margin-right">Filter:</span> 
+      <button class="w3-button w3-white w3-hide-small">ALL</button>
+      <button class="w3-button w3-white w3-hide-small" onclick="openHome()"><i class="fa fa-photo w3-margin-right"></i>Dashboard</button>
+      <button onclick="mapRedirect()" class="w3-button w3-black"> <i class="fa fa-map-pin w3-margin-right"></i>Map</button>
+    </div>
+    </div>
+  </header>
   <div id="map"></div>
   <script>
     function initMap() {
@@ -72,7 +85,11 @@ Project: Community
 To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 -->
-
+<script>
+function openHome(){
+  window.location = "index.html";
+}
+  </script>
 </body>
 
 </html>
