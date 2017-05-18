@@ -81,7 +81,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <div class="w3-container w3-blue" style="width:75%">75% Of Fundraising Complete</div>
     </div><br>
     <button type="button" id="btnDonate" onclick="paypalRedirect()">Donate</button>
-    <button type="button" id="btnInfo" onclick="alert('Hello world!')">Info</button>
+    <button type="button" id="btnInfo" onclick="eventRedirect()">Info</button>
       </div>
     </div>
    <div class="w3-third w3-container w3-margin-bottom">
@@ -98,7 +98,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <div class="w3-container w3-blue" style="width:75%">75% Of Fundraising Complete</div>
     </div><br>
     <button type="button" id="btnDonate" onclick="paypalRedirect()">Donate</button>
-    <button type="button" id="btnInfo" onclick="alert('Hello world!')">Info</button>
+    <button type="button" id="btnInfo" onclick="eventRedirect()">Info</button>
       </div>
     </div>
          <div class="w3-third w3-container w3-margin-bottom">
@@ -115,7 +115,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <div class="w3-container w3-blue" style="width:75%">75% Of Fundraising Complete</div>
     </div><br>
     <button type="button" id="btnDonate" onclick="paypalRedirect()">Donate</button>
-    <button type="button" id="btnInfo" onclick="alert('Hello world!')">Info</button>
+    <button type="button" id="btnInfo" onclick="eventRedirect()">Info</button>
       </div>
     </div>
 
@@ -152,6 +152,10 @@ function mapRedirect(){
 
 function paypalRedirect(){
    window.location =  "https://www.paypal.com/ca/home";
+}
+
+function eventRedirect(){
+    window.location = "event.html";
 }
 
 </script>
