@@ -52,12 +52,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
-    <h1><b>My Portfolio</b></h1>
+    <h1><b>Community Initiative</b></h1>
     <div class="w3-section w3-bottombar w3-padding-16">
       <span class="w3-margin-right">Filter:</span> 
       <button class="w3-button w3-black">ALL</button>
       <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Dashboard</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Map</button>
+      <button onclick="mapRedirect()" class="w3-button w3-white w3-hide-small"> <i class="fa fa-map-pin w3-margin-right"></i>Map</button>
     </div>
     </div>
   </header>
@@ -83,7 +83,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       </div>
     </div>
    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="./images/javascript.png" alt="Python"  style="width:100%" class="w3-hover-opacity">
+       <img src="./images/javaResize.png" id="imgJs" alt="Python"  style="width:100%" class="w3-hover-opacity">
       <div class="w3-container w3-white">
         <p><b>Intro To Java</b></p>
         <p>Instructed by Gary Tong <br></p>
@@ -113,6 +113,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <!-- End page content -->
 </div>
 
+
 <script>
 // Script to open and close sidebar
 function w3_open() {
@@ -124,6 +125,11 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
+
+function mapRedirect(){
+    window.location = "mapView.html";
+}
+
 </script>
 
        

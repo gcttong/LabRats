@@ -34,8 +34,10 @@ Project: Community
   
 }
 
-#imgJs{
-  max-width:387px;
-  max-height:130px;
+#map{
+    width: 700px;
+    height:400;
+    background-color: #ccc;
+    
 }
 
