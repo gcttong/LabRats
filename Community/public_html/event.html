@@ -70,7 +70,13 @@
             <header id="portfolio">
                 <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
                 <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-                <div class="w3-container">
+                <div class=" w3-right">
+
+                    <img src="./images/unitedWayResize.png" id=picture style="width:45%;" class="w3-round">
+
+
+                </div>
+                <div class="w3-container" "w3-half">
                     <h1><b>Python 101</b></h1>
                     <div class="w3-section w3-bottombar w3-padding-16">
                         <span class="w3-margin-right">Filter:</span>
@@ -79,6 +85,8 @@
                         <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Map</button>
                     </div>
                 </div>
+
+
             </header>
 
             <!-- First Photo Grid-->
@@ -175,48 +183,7 @@
             </div>
 
 
-            <div id="map"></div>
-            <script>
-                function initMap() {
-                    var myCenter = new google.maps.LatLng(49.9042073, -97.1604514);
-                    var mapDiv = document.getElementById('map');
 
-                    var map = new google.maps.Map(mapDiv, {
-                        center: { lat: 49.9042073, lng: -97.1604514 },
-                        zoom: 16
-                    });
-                    var contentString = '<div id="content">' +
-                        '<div id="siteNotice">' +
-                        '</div>' +
-                        '<h1 id="firstHeading" class="firstHeading">Brodie Centre, University of Manitoba</h1>' +
-                        '<div id="bodyContent">' +
-                        '<p> 727 Mcdermot Ave, Winnipeg, Manitoba, Canada ' +
-
-                             // change to hotel location 
-                        '<a href="https://www.google.com/maps/place/Brodie+Centre/@49.9041921,-97.1625631,17z/data=!3m1!4b1!4m2!3m1!1s0x52ea73dc5777329f:0x3a90798800ec2cef?hl=en-US"><FONT COLOR="4285F4">View on Google Maps</FONT></a></p>' +
-                        '</div>' +
-                        '</div>';
-                    var infowindow = new google.maps.InfoWindow({
-                        content: contentString
-                    });
-                    var marker = new google.maps.Marker({
-                        position: myCenter,
-                        map: map, title: 'Hello World'
-                    });
-
-
-                    marker.setMap(map);
-                    infowindow.open(map, marker);
-                    marker.addListener('click', function () {
-                        infowindow.open(map, marker);
-                    });
-                }
-            </script>
-
-            <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
-=======
-
->>>>>>> d6e2db83d9a84fa6bea708dfcd8467fa8c3b548b
 
 
             <!-- Pagination -->
