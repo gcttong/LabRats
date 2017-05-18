@@ -175,6 +175,48 @@
             </div>
 
 
+            <div id="map"></div>
+            <script>
+                function initMap() {
+                    var myCenter = new google.maps.LatLng(49.9042073, -97.1604514);
+                    var mapDiv = document.getElementById('map');
+
+                    var map = new google.maps.Map(mapDiv, {
+                        center: { lat: 49.9042073, lng: -97.1604514 },
+                        zoom: 16
+                    });
+                    var contentString = '<div id="content">' +
+                        '<div id="siteNotice">' +
+                        '</div>' +
+                        '<h1 id="firstHeading" class="firstHeading">Brodie Centre, University of Manitoba</h1>' +
+                        '<div id="bodyContent">' +
+                        '<p> 727 Mcdermot Ave, Winnipeg, Manitoba, Canada ' +
+
+                             // change to hotel location 
+                        '<a href="https://www.google.com/maps/place/Brodie+Centre/@49.9041921,-97.1625631,17z/data=!3m1!4b1!4m2!3m1!1s0x52ea73dc5777329f:0x3a90798800ec2cef?hl=en-US"><FONT COLOR="4285F4">View on Google Maps</FONT></a></p>' +
+                        '</div>' +
+                        '</div>';
+                    var infowindow = new google.maps.InfoWindow({
+                        content: contentString
+                    });
+                    var marker = new google.maps.Marker({
+                        position: myCenter,
+                        map: map, title: 'Hello World'
+                    });
+
+
+                    marker.setMap(map);
+                    infowindow.open(map, marker);
+                    marker.addListener('click', function () {
+                        infowindow.open(map, marker);
+                    });
+                }
+            </script>
+
+            <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+=======
+
+>>>>>>> d6e2db83d9a84fa6bea708dfcd8467fa8c3b548b
 
 
             <!-- Pagination -->
